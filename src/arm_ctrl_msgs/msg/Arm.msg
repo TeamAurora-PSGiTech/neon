@@ -1,0 +1,9 @@
+int8 base
+int8 link1
+int8 link2
+int8 link3
+int8 servo1_dir
+int8 servo2_dir
+float32[] servo1_angle
+float32[] servo2_angle
+int8 tool

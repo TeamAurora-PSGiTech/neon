@@ -1,0 +1,13 @@
+{
+    "type": "panorama",
+    "image": "panorama.jpg",
+    "frames_used": 3,
+    "gps": {
+        "latitude": null,
+        "longitude": null,
+        "altitude": null,
+        "accuracy_m": null,
+        "cardinal_direction": ""
+    },
+    "timestamp": "2026-01-29T12:07:40.751164"
+}

@@ -1,0 +1,3 @@
+# Python dependencies for development and the wheel interface
+pyserial>=3.5
+pytest>=7.0

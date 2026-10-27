@@ -1,0 +1,5 @@
+# udev rules for IRC26 - give dialout group access to USB-serial devices
+# Place this file in /etc/udev/rules.d/99-irc26-serial.rules
+
+KERNEL=="ttyUSB[0-9]*", MODE="0660", GROUP="dialout"
+KERNEL=="ttyACM[0-9]*",  MODE="0660", GROUP="dialout"

@@ -1,0 +1,111 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Selection
+    Name: Selection
+  - Class: rviz_common/Tool Properties
+    Name: Tool Properties
+  - Class: rviz_common/Views
+    Name: Views
+  - Class: rviz_common/Time
+    Name: Time
+
+Visualization Manager:
+  Class: ""
+  Name: root
+  Enabled: true
+
+  Global Options:
+    Fixed Frame: map
+    Frame Rate: 30
+    Background Color: 48; 48; 48
+
+  Displays:
+
+    # -------- GRID --------
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Plane: XY
+      Cell Size: 1
+      Plane Cell Count: 10
+      Color: 160; 160; 164
+      Alpha: 0.5
+      Reference Frame: <Fixed Frame>
+
+    # -------- MAP --------
+    - Class: rviz_default_plugins/Map
+      Name: Map
+      Enabled: true
+      Topic:
+        Value: /map
+      Alpha: 0.7
+      Color Scheme: map
+      Use Timestamp: false
+      Queue Size: 50
+
+    # -------- GLOBAL PATH --------
+    - Class: rviz_default_plugins/Path
+      Name: Global Path
+      Enabled: true
+      Topic:
+        Value: /plan
+      Color: 25; 255; 0
+      Line Style: Lines
+      Line Width: 0.05
+      Alpha: 1
+      Queue Size: 100
+
+    # -------- ODOMETRY --------
+    - Class: rviz_default_plugins/Odometry
+      Name: Odometry
+      Enabled: true
+      Topic:
+        Value: /odom
+      Keep: 100
+      Queue Size: 50
+      Shape:
+        Value: Arrow
+      Covariance:
+        Position:
+          Value: true
+        Orientation:
+          Value: true
+
+    # -------- TF --------
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic:
+        Value: /initialpose
+
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Value: /goal_pose
+
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 10
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Pitch: 1.2
+      Yaw: 3.14
+
+Window Geometry:
+  Width: 1800
+  Height: 1000
+  X: 50
+  Y: 50
+
